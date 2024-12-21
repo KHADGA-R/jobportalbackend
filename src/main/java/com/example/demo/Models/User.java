@@ -3,7 +3,7 @@ package com.example.demo.Models;
 import java.time.LocalDateTime;
 
 public class User {
-    private Long id;
+    private Long userId;
     private String firstName;
     private String lastName;
     private String email;
@@ -16,8 +16,8 @@ public class User {
     
     
     
-    public User(Long id, String firstName, String lastName, String email, String password, String phoneNumber, String address, String role, String profilePicture) {
-        this.id = id;
+    public User(Long userId, String firstName, String lastName, String email, String password, String phoneNumber, String address, String role, String profilePicture) {
+        this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email.toLowerCase(); // normalize email
@@ -31,12 +31,12 @@ public class User {
     };
 
     //Getters and Setters
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     };
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long userId) {
+        this.userId = userId;
     };
 
     public String getFirstName(){
@@ -101,6 +101,14 @@ public class User {
 
     public void setProfilePicture(String profilePicture){
         this.profilePicture = profilePicture;
+    };
+
+    public LocalDateTime getCreatedAt(){
+        return createdAt;
+    };
+
+    public void setCreatedAt(LocalDateTime createdAt){
+        this.createdAt = createdAt;
     };
 
 };

@@ -2,6 +2,7 @@ package com.example.demo.Models;
 
 public class Job {
     
+    private String jobId;
     private String title;
     private String company;
     private String location;
@@ -10,7 +11,8 @@ public class Job {
     private String link;
     private String date;
 
-    public Job(String title, String company, String location, String description, String salary, String link, String date) {
+    public Job(String jobId, String title, String company, String location, String description, String salary, String link, String date) {
+        this.jobId = jobId;
         this.title = title;
         this.company = company;
         this.location = location;
@@ -18,6 +20,14 @@ public class Job {
         this.salary = salary;
         this.link = link;
         this.date = date;
+    }
+
+    public String getJobId() {
+        return jobId;
+    }
+
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
     }
 
     public String getTitle() {
